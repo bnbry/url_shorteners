@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>python flask url shortener | {% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    {% for message in get_flashed_messages() %}
+      <h1>{{ message }}</h1>
+    {% endfor %}
+    {% block content %} {% endblock %}
+  </body>
+</html>

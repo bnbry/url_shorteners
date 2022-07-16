@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Index {% endblock %}</h1>
+    <form method="post">
+      <label for="url">URL</label>
+      <input type="text" name="url" placeholder="URL to shorten" value="{{ request.form["url"] }}" autofocus></input>
+      <button type="submit">Submit</button>
+    </form>
+    {% if short_url %}
+    <hr>
+    <span>{{ short_url }}</span>
+    {% endif %}
+{% endblock %}
